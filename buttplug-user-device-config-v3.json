@@ -1,0 +1,56 @@
+{
+    "version": {
+      "major": 3,
+      "minor": 0
+    },
+    "user-configs": {
+      "protocols": {
+        "lovense": {
+          "communication": [
+            {
+              "websocket": {
+                "name": "lovense"
+              }
+            }
+          ],
+          "configurations": []
+        }
+      },
+      "devices": [
+        {
+          "identifier": {
+            "protocol": "lovense",
+            "identifier": "lovense",
+            "address": "6a797313-e431-4b9f-9fd0-3eef4c97df24"
+          },
+          "config": {
+            "name": "lBIS Pump (Lovense Emulation)",
+            "features": [
+              {
+                "description": "Vibration Speed",
+                "feature-type": "Vibrate",
+                "actuator": {
+                  "step-range": [0, 20],
+                  "step-limit": [0, 20],
+                  "messages": ["ScalarCmd"]
+                }
+              },
+              {
+                "description": "Battery Level",
+                "feature-type": "Battery",
+                "sensor": {
+                  "value-range": [[0, 100]],
+                  "messages": ["SensorReadCmd"]
+                }
+              }
+            ],
+            "user-config": {
+              "allow": false,
+              "deny": false,
+              "index": 0
+            }
+          }
+        }
+      ]
+    }
+  }
